@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable, camel_case_types
-class detailsScreen extends StatelessWidget {
+class ScreenDetails extends StatelessWidget {
   String name;
   String age;
   String subject;
   String phone;
 
-  detailsScreen(
+  ScreenDetails(
       {super.key,
       required this.name,
       required this.age,
@@ -17,14 +17,26 @@ class detailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 203, 207, 158),
+      appBar: AppBar(
+        title: const Text('Details'),
+        backgroundColor: Colors.green,
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(name),
+            const SizedBox(
+              height: 20,
+            ),
             Text(age),
+            const SizedBox(
+              height: 20,
+            ),
             Text(subject),
+            const SizedBox(
+              height: 20,
+            ),
             Text(phone),
           ],
         ),
